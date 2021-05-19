@@ -10,18 +10,13 @@ class App
     {
         $url = $this->parseURL();
 
-
         if ($url == NULL) {
             $url = [$this->controller];
         }
-        var_dump($this->controller);
-        var_dump($url[0]);
 
         //controller
-        if (file_exists('../app/controllers/' . $url[0] . 'php')) {
+        if (file_exists('../app/controllers/' . $url[0] . '.php')) {
             $this->controller = $url[0];
-            var_dump($url[0]);
-            var_dump($url[0]);
             unset($url[0]);
         };
 
@@ -45,7 +40,6 @@ class App
 
         //jalankan controller method dan bawa params
         call_user_func_array([$this->controller, $this->method], $this->params);
-        var_dump($this->controller);
     }
 
     //untuk routing
