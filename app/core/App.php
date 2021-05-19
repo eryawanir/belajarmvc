@@ -8,6 +8,7 @@ class App
         var_dump($url);
     }
 
+    //untuk routing
     public function parseURL()
     {
         if (isset($_GET['url'])) {
