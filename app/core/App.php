@@ -8,7 +8,6 @@ class App
         var_dump($url);
     }
 
-    //untuk pretty url untuk routing controller
     public function parseURL()
     {
         if (isset($_GET['url'])) {
