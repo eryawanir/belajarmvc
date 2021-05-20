@@ -1,6 +1,7 @@
 <?php
 class Home extends Controller
 {
+    public $judul = __CLASS__;
     public function index()
     {
         $this->view('templates/header');
