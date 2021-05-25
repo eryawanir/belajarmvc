@@ -19,7 +19,9 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link <?= $this->judul == 'Home' ? 'active font-weight-bold' : ''; ?>" href="<?= BASEURL; ?>">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link  <?= $this->judul == 'Mahasiswa' ? 'active font-weight-bold' : ''; ?>" href="<?= BASEURL . '/mahasiswa'; ?>">Mahasiswa</a>
                     <a class="nav-link  <?= $this->judul == 'About' ? 'active font-weight-bold' : ''; ?>" href="<?= BASEURL . '/about'; ?>">About</a>
+
                 </div>
             </div>
     </div>
