@@ -9,6 +9,9 @@
                 Tambah data
             </button>
 
+            <!-- flash message-->
+            <?php Flasher::flash(); ?>
+
             <!-- List Mahasiswa -->
             <ul class="list-group mt-3">
                 <?php foreach ($data['mhs'] as $mhs) : ?>
