@@ -2,12 +2,24 @@
 
     <div class="row">
         <div class="col-6">
-
             <h3>Daftar Mahasiswa</h3>
-            <!-- Button Modal -->
-            <button type="button" class="btn btn-primary tampilModalTambah" data-toggle="modal" data-target="#formModal">
-                Tambah data
-            </button>
+            <!-- Button Modal Tambah Mahasiswa -->
+            <div class="row">
+                <div class="col-4 mr-0">
+                    <button type="button" class="btn btn-primary tampilModalTambah" data-toggle="modal" data-target="#formModal">
+                        Tambah data
+                    </button>
+                </div>
+                <!-- Input cari Mahasiswa -->
+                <form action="<?= BASEURL ?>/mahasiswa/cari" method="POST">
+                    <div class="input-group ">
+                        <input type="text" class="form-control" placeholder="cari mahasiswa " name="keyword" id="keyword" autocomplete="off">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="submit" id="tombolCari">Cari!</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
 
             <!-- flash message-->
             <?php Flasher::flash(); ?>
