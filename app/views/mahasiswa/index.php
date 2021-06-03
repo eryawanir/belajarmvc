@@ -5,7 +5,7 @@
 
             <h3>Daftar Mahasiswa</h3>
             <!-- Button Modal -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formModal">
+            <button type="button" class="btn btn-primary tampilModalTambah" data-toggle="modal" data-target="#formModal">
                 Tambah data
             </button>
 
@@ -18,6 +18,7 @@
                     <li class="list-group-item">
                         <?= $mhs['nama']; ?>
                         <a href="<?= BASEURL; ?>/mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge badge-danger float-right ml-1" onclick="return confirm('yakin?');">hapus</a>
+                        <a href="<?= BASEURL; ?>/mahasiswa/ubah/<?= $mhs['id']; ?>" class="badge badge-success float-right ml-1 tampilModalUbah" data-toggle="modal" data-target="#formModal" data-id="<?= $mhs['id']; ?>">ubah</a>
                         <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="badge badge-primary float-right ml-1">detail</a>
                     </li>
                 <?php endforeach; ?>
@@ -42,6 +43,7 @@
             </div>
             <div class="modal-body">
                 <form action="<?= BASEURL; ?>/mahasiswa/tambah" method="post">
+                    <input type="hidden" name="id" id="id">
                     <div class="form-group">
                         <label for="nama">Nama</label>
                         <input name="nama" type="text" class="form-control" id="nama">
@@ -57,9 +59,9 @@
                     <div class="form-group">
                         <label for="jurusan">Jurusan</label>
                         <select name="jurusan" class="form-control" id="jurusan">
-                            <option value="Teknik Informtika">Teknik Informatika</option>
+                            <option value="Teknik Informatika">Teknik Informatika</option>
                             <option value="Teknik Mesin">Teknik Mesin</option>
-                            <option value="Teknik elektro">Teknik Elektro</option>
+                            <option value="Teknik Elektro">Teknik Elektro</option>
                             <option value="Teknik Akhlaq">Teknik Akhlaq</option>
                         </select>
                     </div>
